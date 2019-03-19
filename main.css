@@ -3,36 +3,111 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     /* overflow: hidden; */
 }
 
-@media (max-width:1600px) {
-    /* .home{
-        display: flex;
-    } */
-
+@media (min-width:1600px) {
     form h1{
-        font-size: 5vw;
+        font-size: 3vw;
     }
     form{
-        max-width: 40vw;
-        margin: 20% auto;
+        max-width: 20vw;
+        margin: 10% auto;
     }
 
     input{
-        font-size: 2vw;
+        font-size: 1vw;
     }
 
     button{
+        font-size: 1.5vw;
+    }
+    .blocks div span{
+        font-size: 3vw;
+    }
+    header{
+        margin: 0 0 2% 0;
+        display: flex;
+        background-color: #1C495E;
+        position: relative;
+        padding: 2% ;
+        /* justify-content: center; */
+        /* border:1px solid red; */
+        /* border-radius: 10px; */
+    }
+    header button{
+        margin: 0 ;
+        width: 80%;
+        border: none;
+        border-radius: 0;
+        background-color: unset;
+        width: auto;
+        padding: 0 2%;
+    }
+    header h1{
+        font-size: 5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #55CDBA;
+        transform: translateX(-50%) translateY(-50%);
+        margin: 0;
+    }
+    header button:last-child{
+        position: absolute;
+        right: 2%;
+
+    }
+    .home{
+        margin:0  20%;
+        height: auto;
+        padding: 0 2% 5%;
+        /* padding-right: calc(5%-20px) */
+    }
+    .home h2{
+        font-size: 4vw;
+        padding: 1% 0 2% ;
+    }
+    .blocks{
+        grid-template-columns: 49% 49%;
+        grid-template-rows: auto;/*127px 127px 127px 127px ;*/
+        grid-gap: 5% 2%;
+    }
+    footer{
+        opacity: 0;
+        transition: all ease 0.8s;
+    }
+    footer:hover{
+        opacity: 1;
+    }
+    .roomBlocks{
+        grid-template-columns: 100%;
+        /* display: block; */
+        position: relative;
+    }
+    .roomBlocks img{
+        filter: blur(2px) contrast(0.4);
+    }
+    .devSen{
+        position: absolute;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+        align-items: center;
+    }
+    .devices, .sensors{
+        font-size: 2vw;
+        /* width: 100%; */
+        color: #1C495E;
+    }
+    .roomBlocks label{
         font-size: 3vw;
     }
 }
-@media (max-width: 1024px) {
-    /* .home{
-        display: flex;
-        flex-direction: column
-    } */
-
+@media (min-width: 768px) and (max-width:1599px) {
     form h1{
         font-size: 8vw;
     }
@@ -40,83 +115,164 @@ html, body {
         max-width: 50vw;
         margin: 20% auto ;
     }
-
     input{
         font-size: 3vw;
     }
-
     button{
         font-size: 4vw;
     }
-    
+    .blocks div span{
+        font-size: 5vw;
+    }
+    header{
+        margin: 0 0 2% 0;
+        display: flex;
+        background-color: #1C495E;
+        position: relative;
+        padding: 2% ;
+        margin-bottom:5%; 
+    }
+    header button{
+        margin: 0 ;
+        width: 80%;
+        border: none;
+        border-radius: 0;
+        padding: 2%;
+        background-color: unset;
+        width: auto;
+        padding: 0;
+    }
+    header h1{
+        font-size: 6vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #55CDBA;
+        transform: translateX(-50%) translateY(-50%);
+        margin: 0;
+    }
+    header button:last-child{
+        position: absolute;
+        right: 2%;
+
+    }
+    .home{
+        margin:0  5%;
+        height: auto;
+        padding: 0 2% 10%;
+        /* padding-right: calc(5%-20px) */
+    }
+    .home h2{
+        font-size: 6vw;
+        padding: 2% 0 5% ;
+    }
+    .blocks{
+        grid-template-columns: 49% 49%;
+        grid-template-rows: auto;/*127px 127px 127px 127px ;*/
+        grid-gap: 5% 2%;
+    }
 }
-@media (max-width:375px){
-    
+@media (min-width:320px) and (max-width:1023px){
     form h1{
         font-size: 12vw;
     }
-
     form{
         max-width: 80vw;
         margin: 20% auto ;
     }
-
     input{
         font-size: 5vw;
     }
-
     button{
         font-size: 6vw;
     }
-}
-header{
-    margin: 20px;
-    display: flex;
-}
-header div{
-    width: 50%;
-    text-align: center;
-    color: #1C495E;
+    .blocks div span{
+        font-size: 32px;
+    }
+    header{
+        margin: 20px 2%;
+        display: flex;
+    }
+    header button{
+        margin: 0 5px;
+    }
+    .home{
+        margin:0  8%;
+        height: auto;
+        padding: 0 5% 5% 5%;
+    }
+    .home h2{
+    padding: 5% 0 5% ;
     font-size: 32px;
-    border: 1px solid #1C495E;
-    border-radius: 10px ;
-}
-.home h1{
-    text-align: center;
-    color: #55CDBA;
-    padding-bottom: 20px;
-    margin-bottom: 0;
-}
+    }
+    .blocks{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;/*127px 127px 127px 127px ;*/
+        grid-row-gap: 20px;
+    }
+    header h1, footer{
+        display: none;
+    }
+    .roomBlocks{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        /* display: block; */
+        position: relative;
+    }
+    .img1{
+        filter: blur(2px) contrast(0.4);
+    }
+    .devSen{
+        position: absolute;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
 
+        justify-items: center;
+        align-items: center;
+    }
+    .devices, .sensors{
+        font-size: 6vw;
+        /* width: 100%; */
+        color: #1C495E;
+    }
+    .roomBlocks label{
+        font-size: 7vw;
+    }
+}
 .home{
     border-radius: 10px ;
     background-color: #1C495E;
-    margin:0  10%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
 }
 
-div img{
-    width: 90%;
-    height: 100%;
-    position: relative;
-    border-radius: 10px;
-}
-.home div{
-    display: flex;
+.blocks{
+    display: grid;
     width: 100%;
-    height: 25%;
-    margin-bottom: 20px;
-    flex-direction: column;
-    align-items: center;
+    height: auto;
 }
-img {
+.blocks div span{
     position: absolute;
     width: 100%;
-    height: 100%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    color: rgba(85, 205, 187, 0.7);
+    background-color: rgba(28, 73, 94, 0.7);
 }
+
+header button{
+    /* box-sizing: border-box; */
+    background-color: #1C495E;
+}
+
+.home h2{
+    text-align: center;
+    color: #55CDBA;
+    margin: 0;
+}
+
 form h1{
     text-align: center;
     color: #55CDBA;
@@ -131,14 +287,14 @@ form{
 }
 
 body{
-    background-color: #45CDC0;
+    background-color: rgb(26, 27, 30);
 }
 button{
-    padding: 15px ;
+    /* padding: 15px ; */
     width: 100%;
     margin-bottom: 16px;
     padding: 5%;
-    color: #FFF;
+    color: #45CDC0;
     background-color: #0f868c;
     border: 1px solid #0f868c;
     border-radius: 4px;
@@ -159,4 +315,31 @@ input{
 }
 input::placeholder {
     color: #999;
+}
+
+/* Адаптивные картинки  */
+
+.wrapper{
+    width: 100%;
+    border-radius: 10px;
+    /* margin: 2px; */
+    /* border: 5px solid rgb(196, 205, 69); */
+}
+.padded-container{
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 46%;
+}
+.img{
+    width: 100%;
+    height: auto;
+}
+.centered{
+    position: absolute;
+    top:-50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    margin: auto;
 }
