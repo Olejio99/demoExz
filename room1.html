@@ -9,16 +9,22 @@
 </head>
 <body>
     <header>
-        <button onclick = "location.href='home.html'">Home</button>
-        <h1>SmartHouse</h1>
-        <button onclick = "location.href='auth.html'">Login</button>
+        <div class="menu" id="menu">
+            <ul class="main_menu">
+                <li>Home</li>
+                <li>Devices</li>
+                <li class="logo"><h1>SmartHouse</h1></li>
+                <li>Macros</li>
+                <li><a href="auth.html">Login</a> </li>
+            </ul>
+        </div>
     </header>
     <div class="home">
         <h2>Room 1</h2>
         <div class ="blocks roomBlocks">
             <div class="wrapper padded-container">
-                <img class="img centered" src="img\rooms\Minimalizm-2-min.jpg" alt="1"></div>
-            <div class="devSen">
+                <img class="img centered" src="img\rooms\room_Коридор.png" ></div>
+            <!-- <div class="devSen">
                 <div class="devices">
                 <label for="">Devices</label>
                 <ul>
@@ -35,7 +41,7 @@
                     <li>Sensor 3</li>
                 </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

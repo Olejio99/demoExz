@@ -4,12 +4,28 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: auto;
+    font-family:  Arial, Verdana, Helvetica;
 }
 *{
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    border: none; 
+    border-radius: 0;
+}
+h1,h2{
+    cursor: default;
 }
 
+/* :hover:not(html){
+    box-shadow: 300px 0 0 0 rgba(0,0,0,.3) inset;
+} */
+
 @media (min-width:1600px) {
+    /* login */
     form h1{
         font-size: 3vw;
     }
@@ -25,32 +41,33 @@ html, body {
     button{
         font-size: 1.5vw;
     }
+    /* home */
     .blocks div span{
-        font-size: 3vw;
+        font-size: 2vw;
     }
     header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: nowrap;
         margin-bottom:2%;
         padding: 1% 2% ;
-        background-color: #1C495E;
+        background-color: #1C495E; 
+        /* position: fixed; */
+        /* left: 0; */
+        /* top: 0; */
+        width: 100%;
     }
-    header button,h1{
-        /* cursor: pointer; */
-        margin: 0 ;
-        border: none;
-        border-radius: 0;
-        width: auto;
-        padding: 0;
+    .main_menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
     }
-    header button{
-        font-size: 3vw;
-    }
-    header h1{
-        font-size: 5vw;
+    .main_menu li {
+        /* width: auto; */
+        /* height: 100%; */
+        font-size: 2vw;
         color: #55CDBA;
+    }
+    .main_menu  h1 {
+        font-size: 3vw;
     }
     .home{
         margin:0  20%;
@@ -59,7 +76,7 @@ html, body {
         /* padding-right: calc(5%-20px) */
     }
     .home h2{
-        font-size: 4vw;
+        font-size: 3vw;
         padding: 1% 0 2% ;
     }
     .blocks{
@@ -115,8 +132,16 @@ html, body {
         margin: 0 0.5%;
         border-radius: 10px;
     }
-    .devicesHome .light{
+    .devicesHome .light img{
         border: 7px solid green;
+        border-radius: 10px;
+        /* padding-bottom: 0%; */
+        /* height: auto; */
+        /* background-image: url(img/chandelier/1.png); */
+        /* background-size: cover; */
+        width: 100%;
+        height: auto;
+        max-width: 100px;
     }
 }
 @media (min-width: 768px) and (max-width:1599px) {
@@ -133,18 +158,35 @@ html, body {
     button{
         font-size: 4vw;
     }
+    .main_menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        /* width: 100%; */
+    }
+    .main_menu li{
+        /* width: 100%; */
+        /* height: 100%; */
+        font-size: 4vw;
+        color: #55CDBA;
+    }
+     li.logo{
+        font-size: 3vw ;
+    }
     .blocks div span{
         font-size: 5vw;
     }
     header{
-        margin: 0 0 2% 0;
-        display: flex;
-        background-color: #1C495E;
-        position: relative;
-        padding: 2% ;
-        margin-bottom:5%; 
+        margin-bottom:2%;
+        padding: 1% 2% ;
+        background-color: #1C495E; 
+        /* position: fixed; */
+        /* left: 0; */
+        /* top: 0; */
+        width: 100%;
     }
-    header button{
+    /* header button{
         margin: 0 ;
         width: 80%;
         border: none;
@@ -153,8 +195,8 @@ html, body {
         background-color: unset;
         width: auto;
         padding: 0;
-    }
-    header h1{
+    } */
+    /* header h1{
         font-size: 6vw;
         position: absolute;
         top: 50%;
@@ -162,12 +204,12 @@ html, body {
         color: #55CDBA;
         transform: translateX(-50%) translateY(-50%);
         margin: 0;
-    }
-    header button:last-child{
+    } */
+    /* header button:last-child{
         position: absolute;
         right: 2%;
 
-    }
+    } */
     .home{
         margin:0  5%;
         height: auto;
@@ -184,7 +226,7 @@ html, body {
         grid-gap: 5% 2%;
     }
 }
-@media (min-width:320px) and (max-width:1023px){
+@media (min-width:320px) and (max-width:767px){
     form h1{
         font-size: 12vw;
     }
@@ -201,12 +243,33 @@ html, body {
     .blocks div span{
         font-size: 32px;
     }
-    header{
-        margin: 20px 2%;
-        display: flex;
+    .main_menu{
+        display: grid;
+        grid-template-areas:
+        "a b"
+        "c c"
+        "d f";
     }
-    header button{
-        margin: 0 5px;
+    .main_menu li:nth-child(3){
+        grid-area: c;
+        font-size: 5vw;
+        /* border: #fff; */
+        border: 1px solid #ffffff;
+    }
+    header{
+        margin-bottom: 2%;
+        padding: 1% 2% ;
+        background-color: #1C495E; 
+        /* margin: 20px 2%; */
+        /* display: flex; */
+    }
+    
+    .main_menu li {
+        text-align: center;
+        /* border: 1px solid #fff; */
+        border-radius: 4px;
+        font-size: 7vw;
+        color: #55CDBA;
     }
     .home{
         margin:0  8%;
@@ -221,9 +284,6 @@ html, body {
         grid-template-columns: 100%;
         grid-template-rows: auto;/*127px 127px 127px 127px ;*/
         grid-row-gap: 20px;
-    }
-    header h1, footer{
-        display: none;
     }
     .roomBlocks{
         grid-template-columns: 100%;
@@ -254,6 +314,41 @@ html, body {
         font-size: 7vw;
     }
 }
+
+/* Home */
+/* header{
+    position: relative;
+}
+header #menuButton{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.icon-bar{
+    width: 40px;
+    height: 6px;
+    display: block;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+.icon-bar + .icon-bar{
+    margin-top: 5px;
+}
+#menu ul{
+    width: 100%;
+    display: none;
+}
+#menu ul.open{
+    display: block;
+} */
+.main_menu{
+    width: 100%;
+}
+.main_menu li{
+    cursor: pointer;
+}
+
 .home{
     border-radius: 10px ;
     background-color: #1C495E;
@@ -285,21 +380,36 @@ header button{
     margin: 0;
 }
 
+/* login */
+
 form h1{
     text-align: center;
     color: #55CDBA;
 }
-
+form :nth-child(1){
+    margin-bottom: 50px;
+}
+form :nth-child(3){
+    /* margin-bottom: 50px; */
+}
+form input + input{
+    margin-bottom: 50px;
+}
 form{
     padding: 25px 16px;
     background-color: #1C495E;
     border: 1px solid #1C495E;
     height: auto;
     border-radius: 5px;
+    box-shadow:  0px 10px 50px  rgb(0, 0, 0)
 }
 
 body{
-    background-color: rgb(26, 27, 30);
+    background-color: rgb(207, 202, 153);
+    /* background: linear-gradient(180deg,#c4c12d,#abaf89); */
+    /* height: 1000px; */
+    /* background: repeating-linear-gradient(45deg, #B9ECFE, #B9ECFE 10px, #82DDFF 10px, #82DDFF 20px); */
+    /* background: radial-gradient(ellipse 100% 100% at top, rgb(25, 32, 32), rgb(178, 178, 192)) */
 }
 button{
     /* padding: 15px ; */
@@ -325,6 +435,11 @@ input{
     color: #8a97a0;
     margin-bottom: 16px;
 }
+button:hover, input:hover{
+    /* background: #000; */
+    /* box-shadow: 0 0 0 2px white, 0 0 0 4px #3A2F28; */
+    box-shadow: 300px 0 0 0 rgba(0,0,0,.3) inset;
+}
 input::placeholder {
     color: #999;
 }
@@ -334,8 +449,6 @@ input::placeholder {
 .wrapper{
     width: 100%;
     border-radius: 10px;
-    /* margin: 2px; */
-    /* border: 5px solid rgb(196, 205, 69); */
 }
 .padded-container{
     height: 0;

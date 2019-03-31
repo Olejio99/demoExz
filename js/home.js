@@ -1,8 +1,14 @@
 let homePage = `
 <header>
-    <button onclick = "location.href=''">Home</button>
-    <h1>SmartHouse</h1>
-    <button onclick = "location.href='auth.html'">Login</button>
+	<div class="menu" id="menu">
+		<ul class="main_menu">
+			<li>Home</li>
+			<li>Devices</li>
+			<li class="logo"><h1>SmartHouse</h1></li>
+			<li>Macros</li>
+			<li><a href="auth.html">Login</a> </li>
+		</ul>
+	</div>
 </header>
 <div class="home">
     <h2>Room's</h2>
@@ -26,12 +32,6 @@ function initHome(){
     showRooms();
 }
 
-// function showRooms(){
-//     $.ajax({
-//         url:host + '/rooms',
-//     })
-// }
-
 function showRooms() {
 	$.ajax({
 		url: host + '/rooms',
@@ -49,17 +49,19 @@ function showRooms() {
 				let h = roomCard;
 				if(r.user_id == 41 ){
 					h = h.replace('{{id}}', r.id);
-					h = h.replace('{{image}}', `img/rooms/${r.photo}`);
 					h = h.replace('{{name}}', r.name);
+					h = h.replace('{{image}}', `img/rooms/${r.photo}`);
+					// console.log(html)
 					html += h;
 				}
 			}
+			console.log(html)
+
 			$('.blocks').html(html);
 
 			$('.wrapper').on('click', (e) => {
-			 	initRoom(e.currentTarget.id);
+				showRoom(e.currentTarget.id);
 			});
 		}
-
 	});
 }
